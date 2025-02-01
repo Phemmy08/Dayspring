@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Playwrite+DE+Grund:wght@100..400&family=Uncial+Antiqua&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #fff4e6;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+/* body {
+    background: linear-gradient(-45deg, blue, red, green, black);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+}
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
+
+
+
+
+
+
+
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+ul {
+    text-align: right;
+    padding: 20px;
+    list-style-type: none;
+    background-image: linear-gradient(to right, rgb(53, 10, 53), rgb(21, 21, 148));
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+ul li {
+    display: inline;
+}
+
+ul:hover {
+    transform: translateY(-5px);
+    background-image: linear-gradient(to left, rgb(53, 10, 53), rgb(21, 21, 148));
+}
+
+a {
+    text-decoration: none;
+    padding-inline: 20px;
+    color: wheat;
+    transition: 0.3s;
+    font-size: 25px;
+}
+
+a:hover {
+    color: white;
+    cursor: cell;
+}
+
+a:active {
+    color: gold;
+}
+
+
+.head {
+    padding: 300px 20px;
+    background-image: url(background.png);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: left;
+    font-size: 80px;
+    font-family: "Lilita One", sans-serif;
+    padding-right: 50px;
+    text-align: right;
+    color: #CC5500;
+}
+
+.motto {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+
+
+.welcome {
+    /* margin: 20px; */
+    padding: 30px;
+    max-width: 1300px;
+    margin: 40px auto;
+    color: #CC5500;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 20px;
+    background-color: wheat;
+    border-radius: 15px;
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.welcome:hover {
+    transform: translateY(-5px);
+}
+
+/* Call-to-Action Button */
+/* .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #4B3832;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #d2691e;
+    color: #fff;
+}
+ */
+
+
+/* About Us Video Section */
+.about-video {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* Heading & Text */
+.about-video h2 {
+    font-size: 2.2rem;
+    font-family: "Merienda", cursive;
+    color: #00163b;
+    margin-bottom: 10px;
+}
+
+.about-video p {
+    font-size: 1.2rem;
+    color: #444;
+    font-family: "Hanken Grotesk", sans-serif;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    padding-bottom: 0px;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .head {
+        padding: 150px 20px;
+        font-size: 35px;
+        text-align: center;
+        background-image: url('background1.png');
+    }
+
+    .motto {
+        font-size: 16px;
+    }
+
+    .welcome {
+        font-size: 18px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        padding: 100px 10px;
+        font-size: 28px;
+    }
+
+    .motto {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .welcome {
+        font-size: 16px;
+    }
+}
+
