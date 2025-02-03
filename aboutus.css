@@ -28,7 +28,7 @@ nav {
     text-align: right;
     border-radius: 0 0 20px 20px;
     box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
-    position: fixed;
+    /* position: fixed; */
     
     width: 100%;
     top: 0;
@@ -542,4 +542,13 @@ nav:hover {
 footer {
     color: white;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    
+
+    .first {
+        display: block;
+        text-align: center;
+    }
 }
