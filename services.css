@@ -209,6 +209,9 @@ strong {
     .sunday p, .weekly p {
         font-size: 1rem;
     }
+    .caption {
+        width: auto;
+    }
 }
 
 
