@@ -342,13 +342,13 @@ hr {
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #fff4e6;
 }
 
 .event-desk {
     max-width: 900px;
     text-align: center;
-    background: #fff;
+    background: #fff4e6;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -380,7 +380,7 @@ hr {
     }
 }
 
-/* Media Query for Mobile Devices (Max Width: 480px) */
+
 @media (max-width: 480px) {
     .event-desk {
         padding: 10px;
@@ -392,10 +392,11 @@ hr {
 
     .event-image {
         max-height: 500px;
+        max-width: 920px;
         border-radius: 5px; 
     }
 }
-/* Media Query for Mobile Devices (Max Width: 480px) */
+
 @media (max-width: 768px) {
     .event-desk {
         padding: 10px;
@@ -407,6 +408,7 @@ hr {
 
     .event-image {
         max-height: 500px;
+        max-width: 920px;
         border-radius: 5px; 
     }
 }
