@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: wheat;
+}
+
+header {
+    background-image:linear-gradient(to right, #00163b, rgb(21, 21, 179)) ;
+    color: wheat;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 0 0 20px 20px;
+    transition: 0.5s;
+}
+
+header:hover {
+    transform: translateY(-5px);
+    background-image: linear-gradient(to left, rgb(53, 10, 53), rgb(21, 21, 148));
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+
+.cta-buttons {
+    margin-top: 20px;
+}
+.cta-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #CC5500; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-buttons a:hover {
+    background-color: #0A21C0; 
+    transform: scale(1.1);
+}
+
+
+.sermon-section {
+/*     background-color: #f9f9f9; */
+    padding: 20px;
+    text-align: center;
+}
+
+.sermon-section h2 {
+    font-size: 28px;
+    color: #00163b;
+    margin-bottom: 20px;
+}
+
+
+.sermon-card {
+    background-color: #00163b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin: 15px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.sermon-card:hover {
+    transform: translateY(-8px);
+}
+
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+}
+
+.breakdown {
+    text-align: center;
+    padding: 50px;
+    font-size: 50px;
+}

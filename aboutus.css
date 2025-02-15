@@ -488,6 +488,81 @@ nav:hover {
     margin-top: 20px;
 }
 
+
+.s-faith {
+    background: linear-gradient(to right, #00163b, #002b5e); 
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.s-faith p {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    color: #fbc02d; /* Gold color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.s-faith ul {
+    list-style: none;
+    padding: 0;
+}
+
+.s-faith li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.s-faith li::before {
+    content: "✝"; /* Cross Symbol */
+    font-size: 18px;
+    font-weight: bold;
+    color: #fbc02d;
+    position: absolute;
+    left: 10px;
+    top: 16px;
+}
+
+
+.s-faith li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+
+@media (max-width: 768px) {
+    .s-faith {
+        padding: 30px 15px;
+    }
+
+    .s-faith p {
+        font-size: 22px;
+    }
+
+    .s-faith li {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+
+
 .leadership-team {
     background-color: #f9f9f9;
     padding: 50px;

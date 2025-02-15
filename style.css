@@ -99,7 +99,7 @@ a:active {
 .welcome {
     /* margin: 20px; */
     padding: 30px;
-    max-width: 1300px;
+    max-width: 2000px;
     margin: 40px auto;
     color: #CC5500;
     text-align: center;
@@ -219,5 +219,127 @@ footer {
         display: block;
         text-align: center;
     }
+}
+
+#card1 {
+    /* background-color: #f9f4e6;  */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+#card1 h2 {
+    font-family: "Lilita One", sans-serif;
+    color: #4b3832;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+
+.card2 {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card2 h3 {
+    color: #CC5500; 
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.card2 p {
+    font-family: "Hanken Grotesk", sans-serif;
+    color: #333;
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+
+/* Card Container */
+#card1 {
+    display: grid;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 20px;
+    /* background-color: #f9f9f9;  */
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card2 {
+    
+    background-color: wheat; /* Dark background for the card */
+    color: white;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.card2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.eventtitle {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #f4d03f; 
+}
+
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #eaeaea;
+}
+
+
+.click-here {
+    display: inline-block;
+    background-color: #f4d03f; 
+    color: #00163b; 
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.click-here:hover {
+    background-color: #d4ac0d;
+    transform: scale(1.05);
+    color: white;
 }
 
