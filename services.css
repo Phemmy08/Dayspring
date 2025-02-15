@@ -373,9 +373,41 @@ hr {
     .event-container {
         padding: 15px;
     }
+
     
     .event-caption p {
         font-size: 16px;
+    }
+}
+
+/* Media Query for Mobile Devices (Max Width: 480px) */
+@media (max-width: 480px) {
+    .event-desk {
+        padding: 10px;
+    }
+
+    .event-caption p {
+        font-size: 14px;
+    }
+
+    .event-image {
+        max-height: 500px;
+        border-radius: 5px; 
+    }
+}
+/* Media Query for Mobile Devices (Max Width: 480px) */
+@media (max-width: 768px) {
+    .event-desk {
+        padding: 10px;
+    }
+
+    .event-caption p {
+        font-size: 14px;
+    }
+
+    .event-image {
+        max-height: 500px;
+        border-radius: 5px; 
     }
 }
 
