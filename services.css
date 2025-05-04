@@ -385,10 +385,6 @@ hr {
     text-align: center;
     margin: 20px auto;
     max-width: 800px; 
-    :hover {
-        background-color: #152cb3;
-    }
-    transition: background-color 0.3s ease;
 }
 
 
