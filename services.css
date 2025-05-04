@@ -376,6 +376,22 @@ hr {
     font-weight: 500;
 }
 
+#GOAP {
+    background-color: #00163b;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px; 
+    :hover {
+        background-color: #152cb3;
+    }
+    transition: background-color 0.3s ease;
+}
+
+
 @media (max-width: 768px) {
     .event-container {
         padding: 15px;
