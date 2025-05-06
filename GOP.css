@@ -523,6 +523,56 @@ body {
 
 
 
+@media (max-width: 768px) {
+  .countdown-section {
+    padding: 40px 15px;
+  }
+
+  .countdown-section h2 {
+    font-size: 2rem;
+  }
+
+  #countdown {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .time {
+    font-size: 1.5rem;
+    padding: 16px;
+    min-width: 100px;
+  }
+
+  #countdown .time span {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-section {
+    padding: 30px 10px;
+  }
+
+  .countdown-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .time {
+    font-size: 1.2rem;
+    padding: 12px;
+    min-width: 80px;
+  }
+
+  #countdown .time span {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+
 /* Call to Action (CTA) Section Styling */
 .cta-section {
   position: relative;
@@ -681,4 +731,83 @@ footer .back-link {
 
 footer .back-link:hover {
   color: #ff9800; /* Slightly darker gold for hover effect */
+}
+
+
+
+/* ===== Responsive Design ===== */
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
+  }
+
+  .cta-container h2 {
+    font-size: 2rem;
+  }
+
+  .cta-container p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .program-list,
+  .details-container,
+  .ministers-container,
+  .sessions-container {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
+}
+
+/* Small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .hero-banner {
+    padding: 60px 10px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+
+  .hero-banner h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-banner p {
+    font-size: 0.9rem;
+  }
+
+  .cta-container {
+    padding: 20px;
+  }
+
+  .cta-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-container p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
 }
