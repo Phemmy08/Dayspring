@@ -198,6 +198,82 @@
   updateCountdown();
   </script>
 
+    
+
+
+
+
+
+
+<!-- Attendance Section -->
+<section id="session-rsvp" class="attendance-section">
+  <h2>Will You Be Attending?</h2>
+  <div class="attendance-buttons">
+    <!-- Yes Button (opens modal) -->
+    <button class="btn attending" onclick="openYesModal()">Yes, I am attending</button>
+
+    <!-- No Button (opens modal) -->
+    <button class="btn not-attending" onclick="openNoModal()">No, I’m not attending</button>
+  </div>
+</section>
+
+<!-- Yes Attending Modal -->
+<div id="yesAttendingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeYesModal()">&times;</span>
+    <h3>We’re excited you’re coming!</h3>
+    <form action="https://formsubmit.co/dayspringingseraphs@gmail.com" method="POST">
+      <input type="hidden" name="attendance" value="Yes, I am attending">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Gmail Address" pattern=".+@gmail\.com" required>
+      <input type="text" name="coming_from" placeholder="Where are you coming from?" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- No Attending Modal -->
+<div id="noAttendingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeNoModal()">&times;</span>
+    <h3>Let us know why you can’t attend</h3>
+    <form action="https://formsubmit.co/dayspringingseraphs@gmail.com" method="POST">
+      <input type="hidden" name="attendance" value="No, I’m not attending">
+      <textarea name="message" placeholder="Type your reason..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+          <script>
+  function openYesModal() {
+    document.getElementById("yesAttendingModal").style.display = "flex";
+  }
+
+  function closeYesModal() {
+    document.getElementById("yesAttendingModal").style.display = "none";
+  }
+
+  function openNoModal() {
+    document.getElementById("noAttendingModal").style.display = "flex";
+  }
+
+  function closeNoModal() {
+    document.getElementById("noAttendingModal").style.display = "none";
+  }
+
+  // Close modals when clicking outside of them
+  window.onclick = function(event) {
+    const yesModal = document.getElementById("yesAttendingModal");
+    const noModal = document.getElementById("noAttendingModal");
+    if (event.target === yesModal) yesModal.style.display = "none";
+    if (event.target === noModal) noModal.style.display = "none";
+  }
+</script>
+
 
 
 
