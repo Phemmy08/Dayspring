@@ -16,3 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+
+const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+
+        // Optional: Animate the hamburger icon
+        hamburger.classList.toggle('active');
+    });
