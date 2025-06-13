@@ -96,9 +96,14 @@ header {
     width: 100%;
 }
 
-.nav-links a:active {
-    color: #ffcc00;
+
+.nav-links a.active {
+  color: #ffcc00;
+  font-weight: bold;
+  border-bottom: 2px solid #facc15;
 }
+
+
 /* Hamburger Menu (Mobile Only) */
 .hamburger {
     display: none;
