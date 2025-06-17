@@ -176,7 +176,7 @@ header {
 }
 
 
-.head {
+/* .head {
     padding: 300px 20px;
     background-image: url(background.png);
     background-size: cover;
@@ -187,7 +187,143 @@ header {
     padding-right: 50px;
     text-align: right;
     color: #CC5500;
+} */
+
+.head-slideshow-js {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Lilita One", sans-serif;
+  text-align: right;
+  color: #CC5500;
 }
+
+.head-slideshow-js::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: kenBurnsZoom 15s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.head-content {
+  position: relative;
+  z-index: 1;
+  padding: 300px 20px;
+  padding-right: 50px;
+  font-size: 60px;
+}
+
+@keyframes kenBurnsZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1) translate(5px, 5px);
+  }
+}
+
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Lilita One", sans-serif;
+}
+
+.background-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: background-image 1s ease-in-out;
+  animation: slideFade 5s infinite alternate;
+}
+
+@keyframes slideFade {
+  0% {
+    transform: scale(1.05) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1) translateX(-10px);
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust for more/less darkness */
+  backdrop-filter: blur(2px); /* optional blur effect */
+  z-index: 1;
+}
+
+.head-content {
+  position: relative;
+  z-index: 2;
+  text-align: center; /* changed from right to center */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  color: wheat; 
+  font-size: 60px;
+}
+
+
+@media (max-width: 768px) {
+  .head-content {
+    font-size: 42px;
+    padding: 0 15px;
+    font-weight: 800;
+  }
+
+  .head-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+  }
+
+  .head-content ,
+  .motto {
+    font-size: 20px;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .head-content {
+    font-size: 36px;
+    padding: 0 10px;
+    font-weight: 800;
+  }
+
+  .head-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+  }
+
+  .head-content ,
+  .motto {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
 
 .motto {
     font-size: 30px;
