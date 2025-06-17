@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Dayspring Seraphic Church</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Lightbox Styles -->
+  <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">DAYSPRING SERAPHIC CHURCH</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../aboutus.html">About Us</a></li>
+      <li><a href="../services.html">Our Programs</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="../contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+
+  
+
+  <!-- GALLERY SECTION -->
+  <main>
+    <section class="gallery">
+      <h2>Church Gallery</h2>
+      <div class="gallery-grid">
+        <a href="1.jpg" data-lightbox="church"><img src="1.jpg" alt="Church 1" /></a>
+        <a href="2.jpg" data-lightbox="church"><img src="2.jpg" alt="Church 2" /></a>
+        <a href="3.jpg" data-lightbox="church"><img src="3.jpg" alt="Church 3" /></a>
+        <a href="4.jpg" data-lightbox="church"><img src="4.jpg" alt="Church 4" /></a>
+        <a href="5.jpg" data-lightbox="church"><img src="5.jpg" alt="Church 5" /></a>
+        <a href="6.jpg" data-lightbox="church"><img src="6.jpg" alt="Church 6" /></a>
+        <a href="7.jpg" data-lightbox="church"><img src="7.jpg" alt="Church 7" /></a>
+        <a href="8.jpg" data-lightbox="church"><img src="8.jpg" alt="Church 8" /></a>
+        <a href="9.jpg" data-lightbox="church"><img src="9.jpg" alt="Church 9" /></a>
+        <a href="10.jpg" data-lightbox="church"><img src="10.jpg" alt="Church 10" /></a>
+        <a href="11.jpg" data-lightbox="church"><img src="11.jpg" alt="Church 11" /></a>
+        <a href="12.jpg" data-lightbox="church"><img src="12.jpg" alt="Church 12" /></a>
+        <a href="13.jpg" data-lightbox="church"><img src="13.jpg" alt="Church 13" /></a>
+        <a href="14.jpg" data-lightbox="church"><img src="14.jpg" alt="Church 14" /></a>
+        <a href="15.jpg" data-lightbox="church"><img src="15.jpg" alt="Church 15" /></a>
+        <a href="16.jpg" data-lightbox="church"><img src="16.jpg" alt="Church 16" /></a>
+        <a href="17.jpg" data-lightbox="church"><img src="17.jpg" alt="Church 17" /></a>
+        <a href="18.jpg" data-lightbox="church"><img src="18.jpg" alt="Church 18" /></a>
+        <a href="19.jpg" data-lightbox="church"><img src="19.jpg" alt="Church 19" /></a>
+        <a href="20.jpg" data-lightbox="church"><img src="20.jpg" alt="Church 20" /></a>
+        <a href="21.jpg" data-lightbox="church"><img src="21.jpg" alt="Church 21" /></a>
+        <a href="22.jpg" data-lightbox="church"><img src="22.jpg" alt="Church 22" /></a>
+        <a href="23.jpg" data-lightbox="church"><img src="23.jpg" alt="Church 23" /></a>
+        <a href="24.jpg" data-lightbox="church"><img src="24.jpg" alt="Church 24" /></a>
+        <a href="25.jpg" data-lightbox="church"><img src="25.jpg" alt="Church 25" /></a>
+        <a href="26.jpg" data-lightbox="church"><img src="26.jpg" alt="Church 26" /></a>
+        <a href="27.jpg" data-lightbox="church"><img src="27.jpg" alt="Church 27" /></a>
+        <a href="28.jpg" data-lightbox="church"><img src="28.jpg" alt="Church 28" /></a>
+        <a href="29.jpg" data-lightbox="church"><img src="29.jpg" alt="Church 29" /></a>
+        <a href="30.jpg" data-lightbox="church"><img src="30.jpg" alt="Church 30" /></a>
+        <a href="31.jpg" data-lightbox="church"><img src="31.jpg" alt="Church 31" /></a>
+        <a href="32.jpg" data-lightbox="church"><img src="32.jpg" alt="Church 32" /></a>
+        <a href="33.jpg" data-lightbox="church"><img src="33.jpg" alt="Church 33" /></a>
+        <a href="34.jpg" data-lightbox="church"><img src="34.jpg" alt="Church 34" /></a>
+      </div>
+    </section>
+  </main>
+
+  
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Dayspring Seraphic Church. All rights reserved.</p>
+  </footer>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("open");
+  });
+</script>
+
+
+  <!-- Lightbox Script -->
+  <script src="lightbox-plus-jquery.js"></script>
+</body>
+</html>
