@@ -18,6 +18,8 @@
     <meta name="twitter:image" content="https://dayspringseraphicchurch.org/unnamed.png">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="unnamed.png">
+    <link rel="preload" as="image" href="1.jpg">
+    <link rel="preload" as="image" href="2.jpg">
     <meta name="google-site-verification" content="SSxb82fmyT3kVg4fMVmAtuaxKvdraHVdjSDUeKi3L9o" />
     
 
@@ -77,13 +79,18 @@ const images = [
 let index = 0;
 const bgSlide = document.querySelector('.background-slide');
 
+// Function to preload image and then set as background
 function updateSlide() {
-  bgSlide.style.backgroundImage = `url('${images[index]}')`;
-  index = (index + 1) % images.length;
+  const img = new Image();
+  img.src = images[index];
+  img.onload = () => {
+    bgSlide.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  };
 }
 
-updateSlide(); // show first image immediately
-setInterval(updateSlide, 5000); // change every 5 seconds
+updateSlide(); // Show first image
+setInterval(updateSlide, 5000); // Rotate every 5 seconds
 </script>
 
     <main>
