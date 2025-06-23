@@ -19,76 +19,147 @@
     <meta name="twitter:image" content="https://www.dayspringseraphicchurch.org/logo1.jpg">
     <link rel="stylesheet" href="aboutus.css">
     <link rel="icon" href="Logo.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </head>
 <body>
     <header>
         
-        <nav>
-           
-            <ul class="first">
-              <li class="b"><a href="index.html" class="a">Home</a></li>
-              <!-- <li class="b"><a href="aboutus.html" class="a">About Us</a></li> -->
-              <li class="b"><a href="services.html" class="a">Services</a></li>
-              <li class="b"><a href="contact.html" class="a">Contact</a></li>
-          </ul>
-          </nav>
-          
-          
-          
-          
-          
-          
-
-
-
-
-           <h2 class="head">About Us</h2>
         
-    </header>
+           
+             <nav class="navbar">
+            <div class="logo">DAYSPRING SERAPHIC CHURCH</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="services.html">Our Programs</a></li>
+                 <li><a href="gallery/index.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+               
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+          
+          </header>
+          
+          <script>
+            const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+
+        // Optional: Animate the hamburger icon
+        hamburger.classList.toggle('active');
+    });
+          </script>
+          
+          
+          
+
+
+
+
+                <div id="about-particles-bg">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>We are a Christ-centered community, born in worship and growing in grace...</p>
+            </div>
+            </div>
+
+<div id="particles-js"></div>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    color: { value: "#ffffff" },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" }
+    }
+  }
+});
+</script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 100 },
+    size: { value: 3 },
+    color: { value: "#ffffff" },
+    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+    move: { enable: true, speed: 2 }
+  },
+  interactivity: {
+    events: { onhover: { enable: true, mode: "repulse" } }
+  }
+});
+</script>
+
+
+                
+
+
+
+        
+   
     <main>
         <div class="about-us-logo">
             <img src="logo1.jpg" alt="Church Logo">
         </div>
 
         <section class="mission-section">
-            <h2>Mission Statement</h2>
-            <p class="mission-intro">
-                At Dayspring Saraphic Church, our mission is to create a welcoming, faith-filled environment where believers can grow spiritually, serve others, and spread the love of Christ.
-            </p>
-            
+  <h2 class="mission-heading">Mission Statement</h2>
 
+  <p class="mission-intro">
+    At Dayspring Seraphic Church, our mission is to create a welcoming, faith-filled environment where believers can grow spiritually, serve others, and spread the love of Christ.
+  </p>
 
+  <ul class="mission-list">
+    <li>
+      <strong>🙏 Worship and Spiritual Growth</strong>
+      <p>"We are dedicated to creating a space where believers can encounter God through vibrant worship, inspiring sermons, and heartfelt prayer."</p>
+    </li>
+    <li>
+      <strong>🤝 Community and Fellowship</strong>
+      <p>"We aim to foster a welcoming community where people from all walks of life can find belonging and support."</p>
+    </li>
+    <li>
+      <strong>📢 Evangelism and Outreach</strong>
+      <p>"Our mission is to share the love of Christ with the world through evangelism and outreach programs."</p>
+    </li>
+    <li>
+      <strong>❤️ Service and Compassion</strong>
+      <p>"Following the example of Jesus, we strive to serve those in need, embodying compassion, justice, and mercy."</p>
+    </li>
+    <li>
+      <strong>📖 Discipleship and Education</strong>
+      <p>"We are committed to equipping believers with biblical knowledge and the tools they need to live a life of faith."</p>
+    </li>
+    <li>
+      <strong>👨‍👩‍👧‍👦 Family and Youth Empowerment</strong>
+      <p>"Our mission includes empowering families and nurturing the next generation of faithful leaders."</p>
+    </li>
+  </ul>
+</section>
 
-
-
-            <!-- mission -->
-            <ul class="mission-list">
-                <li>
-                    <strong>🙏 Worship and Spiritual Growth</strong>
-                    <p>"We are dedicated to creating a space where believers can encounter God through vibrant worship, inspiring sermons, and heartfelt prayer."</p>
-                </li>
-                <li>
-                    <strong>🤝 Community and Fellowship</strong>
-                    <p>"We aim to foster a welcoming community where people from all walks of life can find belonging and support."</p>
-                </li>
-                <li>
-                    <strong>📢 Evangelism and Outreach</strong>
-                    <p>"Our mission is to share the love of Christ with the world through evangelism and outreach programs."</p>
-                </li>
-                <li>
-                    <strong>❤️ Service and Compassion</strong>
-                    <p>"Following the example of Jesus, we strive to serve those in need, embodying compassion, justice, and mercy."</p>
-                </li>
-                <li>
-                    <strong>📖 Discipleship and Education</strong>
-                    <p>"We are committed to equipping believers with biblical knowledge and the tools they need to live a life of faith."</p>
-                </li>
-                <li>
-                    <strong>👨‍👩‍👧‍👦 Family and Youth Empowerment</strong>
-                    <p>"Our mission includes empowering families and nurturing the next generation of faithful leaders."</p>
-                </li>
-            </ul>
-        </section>
 
 
 
@@ -248,18 +319,46 @@
 
 
           <!-- background video -->
-                <div class="video-container">
+                <!-- <div class="video-container">
                     <video autoplay muted loop id="bg-video">
                         <source src="0308.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="overlay"></div>
+                    <div class="overlay"></div> -->
 
 
     </main>
-    <hr>
-    <footer>
-        2025 &copy; Dayspring Seraphic Church
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <footer class="scroll-reveal">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Laibuga House, Ilesha Garage, Akure South, Ondo State.</p>
+                <p>Phone: +2347059176093</p>
+                <p>Email: dayspringingseraphs@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/DayspringSC/" aria-label="Facebook">Facebook</a>
+                    <a href="https://youtube.com/@DayspringSeraphicChurch" aria-label="Youtube">Youtube</a>
+                    <a href="https://instagram.com/dayspringseraphicchurch/?fbclid=IwY2xjawG3FYtleHRuA2FlbQIxMAABHQvMNfxZ8Z7CuxlNNqCTJTaMxihaCCu_Qbh8CjGup0Emvyjs0K0_vdVfnA_aem_msWL-ry2eQOmbyGLmFvkKw" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dayspring Seraphic Church. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
