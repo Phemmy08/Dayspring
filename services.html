@@ -23,50 +23,56 @@
 </head>
 <body>
     <header>
-        <nav class="links">
-            <ul>
+           <nav class="navbar">
+            <div class="logo">DAYSPRING SERAPHIC CHURCH</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <!-- <li><a href="#home">Services</a></li> -->
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Our Programs</a></li>
+                 <li><a href="gallery/index.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+               
             </ul>
-        </nav>
-        <section class="ourservice">
-
-            <h2 class="first">Our Services</h2>
-            <p class="caption">We welcome you to join us for worship and fellowship, If you are new to the city and you are looking for a Saraphic Church, we have a place for you.</p>
-        </section>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+      
     </header>
-    <hr>
-    <main>
-        <section class="sunday">
-            <nav class="lifeclass">
-                <h2 class="s">Sunday Services</h2>
-                <h3>Life Class(Sunday School)</h3>
-                <p><strong>Time:</strong>Sundays at 8:00AM - 9:00AM</p>
-                <p>Experience the life class with us, with intensive teaching and clearification of the God's Word.</p>
-            </nav>
+<h2 class="first scroll-reveal">Our Services</h2>
+<p class="caption scroll-reveal">
+  We welcome you to join us for worship and fellowship. If you are new to the city and looking for a Seraphic Church, we have a place for you.
+</p>
 
+<section class="sunday scroll-reveal">
+  <nav class="lifeclass">
+    <h2 class="s">🙏 Sunday Services</h2>
+    <h3>Life Class (Sunday School)</h3>
+    <p><strong>Time:</strong> Sundays at 8:00AM - 9:00AM</p>
+    <p>Experience the Life Class with us, with intensive teaching and clarification of God's Word.</p>
+  </nav>
 
-            <h3>Victory Service(Sunday Service)</h3>
-            <p><strong>Time: </strong>9:00AM</p>
-            <p>Experience a traditional worship service with hymns, prayer, and scripture readings in a warm and welcoming environment.</p>
-        </section>
+  <h3>Victory Service</h3>
+  <p><strong>Time:</strong> 9:00AM</p>
+  <p>Traditional worship service with hymns, prayer, and scripture readings in a warm, welcoming environment.</p>
+</section>
 
-        <section class="weekly">
-            <h2 class="w">Weekly Service</h2>
-            <nav class="tuesday">
-                <h3>Tuesday Prayer Meeting</h3>
-                <p><strong>Time:</strong>5:30PM - 7:00PM</p>
-            </nav>
-        
-            <h3>Thursday Bible Study</h3>
-            <p><strong>Time:</strong>5:30PM - 7:00PM</p>
-        </section>
+<section class="weekly scroll-reveal">
+  <h2 class="w">📅 Weekly Services</h2>
+  <nav class="tuesday">
+    <h3>Prayer Meeting (Tuesdays)</h3>
+    <p><strong>Time:</strong> 5:30PM - 7:00PM</p>
+  </nav>
 
-        <p class="join">Looking for a place to worship? Join us this Sunday and experience uplifting worship, inspiring messages, and a loving community</p>
+  <h3>Bible Study (Thursdays)</h3>
+  <p><strong>Time:</strong> 5:30PM - 7:00PM</p>
+</section>
 
-        <hr>
+<p class="join scroll-reveal">
+  Looking for a place to worship? Join us this Sunday and experience uplifting worship, inspiring messages, and a loving community.
+</p>
+
 
 
         <section id="upcoming-events">
@@ -173,18 +179,63 @@
             </div>
         </section>   -->
 
-        <!-- background video -->
-        <div class="video-container">
-            <video autoplay muted loop id="bg-video">
-                <source src="Service-background.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="overlay"></div>
+      
 
     </main>
-    <hr>
-    <footer>
-        <p>2025 &copy; Dayspring Saraphic Church</p>
+   <script>
+  const scrollElements = document.querySelectorAll('.scroll-reveal');
+
+  function isInView(el, offset = 0.85) {
+    const top = el.getBoundingClientRect().top;
+    return top < (window.innerHeight * offset);
+  }
+
+  function showScrollElement(el) {
+    el.classList.add('scrolled');
+  }
+
+  function scrollHandler() {
+    scrollElements.forEach(el => {
+      if (isInView(el)) {
+        showScrollElement(el);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', scrollHandler);
+  window.addEventListener('load', scrollHandler);
+</script>
+
+
+    <footer class="scroll-reveal">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Laibuga House, Ilesha Garage, Akure South, Ondo State.</p>
+                <p>Phone: +2347059176093</p>
+                <p>Email: dayspringingseraphs@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/DayspringSC/" aria-label="Facebook">Facebook</a>
+                    <a href="https://youtube.com/@DayspringSeraphicChurch" aria-label="Youtube">Youtube</a>
+                    <a href="https://instagram.com/dayspringseraphicchurch/?fbclid=IwY2xjawG3FYtleHRuA2FlbQIxMAABHQvMNfxZ8Z7CuxlNNqCTJTaMxihaCCu_Qbh8CjGup0Emvyjs0K0_vdVfnA_aem_msWL-ry2eQOmbyGLmFvkKw" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dayspring Seraphic Church. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
