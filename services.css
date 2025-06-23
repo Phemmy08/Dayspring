@@ -656,3 +656,19 @@ footer {
         margin: 0 0.5rem;
     }
 }
+
+
+
+
+
+
+
+
+
+.unavailable {
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    height: 10vh;
+    font-size: 3rem;
+}
