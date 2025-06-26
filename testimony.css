@@ -1,71 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Playwrite+DE+Grund:wght@100..400&family=Uncial+Antiqua&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
-ul {
-    text-align: right;
-    padding: 20px;
-    list-style-type: none;
-    background-image: linear-gradient(to right, rgb(53, 10, 53), rgb(21, 21, 148));
-    border-radius: 0px 0px 20px 20px;
-    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.4);
-}
-
-ul li {
-    display: inline;
-}
-
-ul:hover {
-    transform: translateY(-5px);
-    background-image: linear-gradient(to left, rgb(53, 10, 53), rgb(21, 21, 148));
-}
-
-a {
-    text-decoration: none;
-    padding-inline: 20px;
-    color: wheat;
-    transition: 0.3s;
-    font-size: 25px;
-}
-
-a:hover {
-    color: white;
-    cursor: cell;
-}
-
-a:active {
-    color: gold;
-}
-
-h1 {
-    text-align: center;
-    font-size: 40px;
-    padding: 30px;
-    color: #CC5500;
-}
-
-#testimony {
-    max-width: 500px;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    background: #f9e8c6;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-input, textarea {
+.navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-button {
-    background: #fdd835;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.75);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #2e2e6e;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #2e2e6e;
+    font-weight: 500;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #2e2e6e;
+    border-radius: 2px;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      display: none;
+      padding: 1rem;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+
+
+.testimony-wrapper {
+    background: #f9f9fc;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 3rem auto;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .testimony-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .testimony-title {
+    font-size: 2.2rem;
+    color: #2e2e6e;
+    margin-bottom: 0.5rem;
+  }
+
+  .testimony-intro {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .testimony-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #333;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background: #2e2e6e;
+    color: #fff;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .submit-btn:hover {
+    background: #1b1b4f;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 500px) {
+    .testimony-title {
+      font-size: 1.6rem;
+    }
+    .testimony-wrapper {
+      padding: 2rem 1rem;
+    }
+  }
+
+
+
+  footer {
+    background-color: #002244;
+    color: white;
+    padding: 3rem 2rem 1rem;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-links a {
+        margin: 0 0.5rem;
+    }
 }

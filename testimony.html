@@ -8,64 +8,134 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> 
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">Dayspring Seraphic Church</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimony">Testimony</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <h1>TESTIMONY </h1>
+
+
+
+      
     </header>
     <main>
-        <section id="testimony">
-            <h2>Share Your Testimony</h2>
-            <p>Tell us what God has done in your life. Your testimony will be reviewed and shared during our next service.</p>
-        
-            <form action="https://formsubmit.co/dayspringingseraphs@gmail.com" method="POST">
-                <label>Title:</label>
-                <select name="title">
-                    <option>Miraculous Healing</option>
-                    <option>Miraculous Delivery</option>
-                    <option>New body birth</option>
-                    <option>Marital Victory</option>
-                    <option>Marriage/Wedding</option>
-                    <option>Total Deliverance</option>
-                    <option>Provision of New job</option>
-                    <option>Victory over enemies</option>
-                    <option>Divine Intervention</option>
-                </select>
-            <p>
-                <label>Full Name *</label>
-                <input type="text" name="name" required>
-            </p>
-                <label>Email *</label>
-                <input type="email" name="email" required>
-            
-                <label>Phone</label>
-                <input type="tel" name="phone">
-            <p>
-                <label>Sex:</label>
-                <select name="sex">
-                    <option>Male</option>
-                    <option>Female</option>
-                </select>
-            </p>
-                <label>Country:</label>
-                <input type="text" name="country">
-            
-                <label>Share your Testimony *</label>
-                <textarea name="testimony" required></textarea>
-            
-                <!-- Hidden fields for email subject and no captcha -->
-                <input type="hidden" name="_subject" value="New Testimony Submission">
-                <input type="hidden" name="_captcha" value="false">
-            
-                <button type="submit">Send Testimony</button>
-            </form>
+       <section id="testimony-section" class="testimony-wrapper">
+  <div class="testimony-header">
+    <h2 class="testimony-title">Share Your Testimony</h2>
+    <p class="testimony-intro">Tell us what God has done in your life. Your testimony will be reviewed and shared during our next service.</p>
+  </div>
+
+  <form action="https://formsubmit.co/dayspringingseraphs@gmail.com" method="POST" class="testimony-form">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <select name="title" id="title" required>
+        <option value="" disabled selected>Select a testimony title</option>
+        <option>Miraculous Healing</option>
+        <option>Miraculous Delivery</option>
+        <option>New body birth</option>
+        <option>Marital Victory</option>
+        <option>Marriage/Wedding</option>
+        <option>Total Deliverance</option>
+        <option>Provision of New job</option>
+        <option>Victory over enemies</option>
+        <option>Divine Intervention</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" name="name" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" name="phone" id="phone">
+    </div>
+
+    <div class="form-group">
+      <label for="sex">Sex:</label>
+      <select name="sex" id="sex" required>
+        <option value="" disabled selected>Select your sex</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" name="country" id="country">
+    </div>
+
+    <div class="form-group">
+      <label for="testimony">Share your Testimony *</label>
+      <textarea name="testimony" id="testimony" required></textarea>
+    </div>
+
+    <input type="hidden" name="_subject" value="New Testimony Submission">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="submit-btn">Send Testimony</button>
+  </form>
+</section>
+
+
     </main>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+<footer class="scroll-reveal">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Laibuga House, Ilesha Garage, Akure South, Ondo State.</p>
+                <p>Phone: +2347059176093</p>
+                <p>Email: dayspringingseraphs@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/DayspringSC/" aria-label="Facebook">Facebook</a>
+                    <a href="https://youtube.com/@DayspringSeraphicChurch" aria-label="Youtube">Youtube</a>
+                    <a href="https://instagram.com/dayspringseraphicchurch/?fbclid=IwY2xjawG3FYtleHRuA2FlbQIxMAABHQvMNfxZ8Z7CuxlNNqCTJTaMxihaCCu_Qbh8CjGup0Emvyjs0K0_vdVfnA_aem_msWL-ry2eQOmbyGLmFvkKw" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dayspring Seraphic Church. All rights reserved.</p>
+        </div>
+    </footer>
     
 </body>
 </html>
