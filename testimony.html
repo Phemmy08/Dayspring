@@ -106,6 +106,95 @@
   });
 </script>
 
+<!-- ✅ BEST PLACE: just before </body> -->
+<script>
+  const viewMoreBtn = document.getElementById('viewMoreBtn');
+  const hiddenCards = document.querySelectorAll('.testimony-card.hidden');
+
+  let current = 0;
+  const step = 3;
+
+  viewMoreBtn.addEventListener('click', () => {
+    for (let i = current; i < current + step && i < hiddenCards.length; i++) {
+      hiddenCards[i].classList.remove('hidden');
+    }
+
+    current += step;
+
+    if (current >= hiddenCards.length) {
+      viewMoreBtn.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+
+
+
+
+<section id="testimony-display" class="scroll-reveal">
+  <h2 class="section-title">📖 Testimonies</h2>
+
+  <div id="testimony-grid" class="testimony-grid">
+
+    <!-- Visible testimony -->
+    <div class="testimony-card">
+      <h3>🙌 Miraculous Healing</h3>
+      <p class="meta">Atanda Margaret Omolara • Nigeria</p>
+      <p class="message">“I am grateful to God for the salvation of my soul, the gift of Dayspring Seraphic Church. I am also grateful for sound and perfect health, for divine healing. I also want to thank him for supernatural provision. May his name be praised for ever. Amen!”</p>
+    </div>
+
+    <!-- Hidden testimonies -->
+    <div class="testimony-card hidden">
+      <h3>Miraculous Healing</h3>
+      <p class="meta">Suru Rachel • Nigeria</p>
+      <p class="message">“I want to thank God over my life , last week I was very ill but the lord healed me I'm hale and healthy!”</p>
+    </div>
+
+    <!-- <div class="testimony-card hidden">
+      <h3>💍 Marital Breakthrough</h3>
+      <p class="meta">Sister Joy • Canada</p>
+      <p class="message">“God settled my home after years of delay. We are now happily married!”</p>
+    </div>
+
+    <div class="testimony-card hidden">
+      <h3>🚗 Divine Intervention</h3>
+      <p class="meta">Brother Samuel • Ghana</p>
+      <p class="message">“I escaped an accident that should have claimed my life. Jesus saved me!”</p>
+    </div>
+ -->
+  </div>
+
+  <button id="viewMoreBtn" class="view-more">View More Testimonies</button>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+    const hiddenCards = document.querySelectorAll('.testimony-card.hidden');
+
+    let current = 0;
+    const step = 3;
+
+    viewMoreBtn.addEventListener('click', () => {
+      for (let i = current; i < current + step && i < hiddenCards.length; i++) {
+        hiddenCards[i].classList.remove('hidden');
+      }
+
+      current += step;
+
+      if (current >= hiddenCards.length) {
+        viewMoreBtn.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+<script src="testimony.js" defer></script>
+
+
+
 <footer class="scroll-reveal">
         <div class="footer-content">
             <div class="footer-section">
