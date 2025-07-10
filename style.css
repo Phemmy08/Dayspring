@@ -118,6 +118,7 @@ header {
     background-color: white;
     border-radius: 3px;
     transition: 0.3s;
+    margin-right: 6px;
 }
 
 /* Mobile Responsive */
