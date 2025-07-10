@@ -9,16 +9,13 @@
     box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(
-    circle at top left,
-    rgba(91, 33, 182, 0.4),
-    #ffffff 40%
-  );
-  color: #333;
-}
+  body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow-x: hidden;
+        }
 
 
 
@@ -179,302 +176,392 @@ header {
 
 
 
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-h2.first {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-p.caption {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.show {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-@media (max-width: 600px) {
-  h2.first {
-    font-size: 2rem;
-  }
-
-  p.caption {
-    font-size: 1rem;
-  }
-}
 
 
+      
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* Section: Sunday Services */
-#sunday {
-  background: radial-gradient(
-    circle at top left,
-    rgba(0, 128, 255, 0.4),
-    #ffffff 40%
-  );
-  padding: 80px 20px;
-  text-align: center;
-}
+        /* Header Section */
+        #services {
+            text-align: center;
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+        }
 
-#sunday h2.s {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
+        #services h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
 
-.service-block {
-  margin: 20px auto;
-  max-width: 700px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+        #services .caption {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
 
-.service-block:hover {
-  transform: translateY(-5px);
-}
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
 
-.service-block h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
+        /* Service Sections */
+        .sunday, .weekly {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 40px 0;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
 
-.service-block p {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
+        .sunday.visible, .weekly.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-@media (max-width: 600px) {
-  #sunday h2.s {
-    font-size: 2rem;
-  }
+        .sunday h2, .weekly h2 {
+            font-size: 2.5rem;
+            color: #4a5568;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
 
-  .service-block p {
-    font-size: 1rem;
-  }
-}
+        .sunday h2:after, .weekly h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
 
+        .service-block {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
+        .service-block:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
 
+        .service-block h3 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
 
-/* Section: Weekly Services */
-#weekly {
-  background: radial-gradient(
-    circle at top right,
-    rgba(255, 165, 0, 0.35),  /* Orange glow */
-    #ffffff 40%
-  );
-  padding: 80px 20px;
-  text-align: center;
-}
+        .service-block p {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
 
-#weekly h2.w {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
+        .service-block strong {
+            color: #667eea;
+        }
 
-/* Reuse .service-block styling from earlier */
-.service-block {
-  margin: 20px auto;
-  max-width: 700px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+        /* Join Section */
+        .join {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
 
-.service-block:hover {
-  transform: translateY(-5px);
-}
+        .join.visible {
+            transform: scale(1);
+            opacity: 1;
+        }
 
-.service-block h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
+        /* Events Section */
+        #upcoming-events {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
 
-.service-block p {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
+        #upcoming-events.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-/* Join Us Text */
-.join {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 700px;
-  font-size: 1.2rem;
-  padding: 20px;
-  background: #fff;
-  border-left: 5px solid #ffa500; /* Orange */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
+        #upcoming-events h2 {
+            font-size: 2.5rem;
+            color: #4a5568;
+            margin-bottom: 40px;
+            text-align: center;
+        }
 
-@media (max-width: 600px) {
-  #weekly h2.w {
-    font-size: 2rem;
-  }
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-  .join {
-    font-size: 1rem;
-  }
-}
+        .event-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideInUp 0.8s ease forwards;
+        }
 
+        .event-card:nth-child(1) { animation-delay: 0.1s; }
+        .event-card:nth-child(2) { animation-delay: 0.2s; }
+        .event-card:nth-child(3) { animation-delay: 0.3s; }
 
+        .event-card:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+            opacity: 1 !important;
+        }
 
+        .event-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
+        .event-card .eventtitle {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
 
+        .event-card .date, .event-card .time, .event-card .location {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
 
+        .event-card .description {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
 
+        /* Flyers Section */
+        #flyers {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
 
-/* Section: Upcoming Events */
-#upcoming-events {
-  background: radial-gradient(
-    circle at top center,
-    rgba(200, 0, 100, 0.35),
-    #ffffff 50%
-  );
-  padding: 80px 20px;
-  text-align: center;
-}
+        #flyers.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-#upcoming-events h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #330033;
-}
+        #flyers h2 {
+            font-size: 2.5rem;
+            color: #4a5568;
+            margin-bottom: 40px;
+            text-align: center;
+        }
 
-.events-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+        .flyer {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
 
-.event-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
+        .flyer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
 
-.event-card:hover {
-  transform: translateY(-6px);
-}
+        .flyer img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
 
-.eventtitle {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #800040;
-  margin-bottom: 10px;
-}
+        .flyer-info h3 {
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
 
-.event-card p {
-  margin: 6px 0;
-  font-size: 1rem;
-  color: #333;
-}
+        .flyer-info p {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
 
-@media (max-width: 600px) {
-  #upcoming-events h2 {
-    font-size: 2rem;
-  }
+        .flyer-info strong {
+            color: #667eea;
+        }
 
-  .event-card {
-    padding: 15px;
-  }
-}
+        .description {
+            margin-top: 20px;
+            line-height: 1.7;
+        }
 
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #services h2 {
+                font-size: 2.5rem;
+            }
 
+            #services .caption {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
 
+            .sunday, .weekly, #upcoming-events, #flyers {
+                padding: 40px 20px;
+                margin: 20px 0;
+            }
 
-#flyers {
-  padding: 80px 20px;
-  background: radial-gradient(
-    circle at top left,
-    rgba(0, 120, 255, 0.3),
-    #ffffff 50%
-  );
-  text-align: center;
-}
+            .sunday h2, .weekly h2, #upcoming-events h2, #flyers h2 {
+                font-size: 2rem;
+            }
 
-#flyers h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
+            .events-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
 
-.flyer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
+            .flyer {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
 
-.flyer img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+            .flyer img {
+                width: 300px;
+                height: 300px;
+            }
 
-.flyer-info h3 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-bottom: 10px;
-}
+            .service-block {
+                padding: 20px;
+            }
 
-.flyer-info p {
-  font-size: 1rem;
-  margin: 4px 0;
-  color: #333;
-}
+            .join {
+                padding: 30px 20px;
+                font-size: 1.1rem;
+            }
+        }
 
-.flyer .description {
-  margin-top: 10px;
-  font-style: italic;
-  color: #444;
-}
+        @media (max-width: 480px) {
+            #services {
+                padding: 60px 0;
+            }
 
-@media (max-width: 600px) {
-  .flyer img {
-    max-height: 300px;
-  }
+            #services h2 {
+                font-size: 2rem;
+            }
 
-  #flyers h2 {
-    font-size: 2rem;
-  }
-}
+            .sunday, .weekly, #upcoming-events, #flyers {
+                padding: 30px 15px;
+            }
 
+            .sunday h2, .weekly h2, #upcoming-events h2, #flyers h2 {
+                font-size: 1.8rem;
+            }
 
+            .event-card {
+                padding: 20px;
+            }
 
+            .flyer {
+                padding: 20px;
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
 
 
 
