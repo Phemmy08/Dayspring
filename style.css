@@ -662,6 +662,55 @@ footer {
 
 
 
+.event-flyer-section {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.event-flyer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.event-flyer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  /* No reverse here, image stays on the right */
+}
+
+.event-flyer-text {
+  flex: 1 1 50%;
+  min-width: 280px;
+}
+
+.event-flyer-text h2 {
+  font-size: 2rem;
+  color: #2d3e50;
+  margin-bottom: 20px;
+}
+
+.event-flyer-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.event-flyer-image-wrapper {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.event-flyer-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
 
 
 
