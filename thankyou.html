@@ -1,30 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thank You</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: #f4f4f4;
-    }
-    .btn {
-      background-color: #FFD700;
-      color: black;
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Camp Nehemiah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+        
+        .header .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 1s ease-out;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        .header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header h3 {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 2.5rem;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #555;
+            text-align: center;
+        }
+        
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .info-card h4 {
+            color: #4CAF50;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+            text-align: left;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .footer-note {
+            background: #f1f3f4;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .footer-note strong {
+            color: #4CAF50;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+            }
+            
+            .header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .header h2 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h2>🎉 Thank you for confirming your attendance!</h2>
-  <p>Show your excitement by using our event DP frame below:</p>
-  <a class="btn" href="https://getdp.co/GOAPC" target="_blank">Get My DP</a>
+    <div class="container">
+        <div class="header">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2><strong>Thank You for Contacting Us!</strong></h2>
+            <h3>Your message has been successfully sent to our team.</h3>
+        </div>
+        
+        <div class="content">
+            <p>We appreciate you taking the time to reach out to us about Camp Nehemiah. Your inquiry is important to us, and we're excited to help you with your questions.</p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <h4><i class="fas fa-clock"></i> Response Time</h4>
+                    <p>We typically respond to all inquiries within 24-48 hours during business days.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4><i class="fas fa-envelope"></i> Check Your Email</h4>
+                    <p>Keep an eye on your inbox (including spam folder) for our response.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4><i class="fas fa-phone"></i> Urgent Matters</h4>
+                    <p>If your inquiry is time-sensitive, feel free to call us directly.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4><i class="fas fa-heart"></i> Camp Nehemiah</h4>
+                    <p>Registration open now! Early bird discounts available for the first 50 registrants.</p>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <a href="Camp-Nehimiah25/index.html#contact" class="btn">
+                    <i class="fas fa-arrow-left"></i> Back to Contact
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <p><strong>Blessings from The Camp Nehemiah Team</strong><br>
+            Dayspring Seraphic Church</p>
+        </div>
+    </div>
 </body>
 </html>

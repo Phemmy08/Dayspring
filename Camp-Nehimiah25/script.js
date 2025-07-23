@@ -134,55 +134,15 @@ document.addEventListener('click', (e) => {
 
 // Form submission animation
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    contactForm.addEventListener('submit', function(e) {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
         
-        try {
-            submitBtn.classList.add('loading');
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            // Success animation
-            submitBtn.classList.remove('loading');
-            submitBtn.classList.add('success');
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-            
-            // Reset form with animation
-            contactForm.reset();
-            const inputs = contactForm.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                input.style.animation = 'fadeOut 0.5s ease forwards';
-            });
-            
-            // Reset button after delay
-            setTimeout(() => {
-                submitBtn.classList.remove('success');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-                inputs.forEach(input => {
-                    input.style.animation = '';
-                });
-            }, 3000);
-            
-        } catch (error) {
-            console.error('Error:', error);
-            submitBtn.classList.remove('loading');
-            submitBtn.classList.add('error');
-            submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
-            
-            setTimeout(() => {
-                submitBtn.classList.remove('error');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            }, 3000);
-        }
+        // Let the form submit normally (don't prevent default)
+        // The _next hidden input will redirect to your thank you page
     });
 }
-
 // Add active class to current section in navigation
 function updateActiveSection() {
     const sections = document.querySelectorAll('section[id]');
