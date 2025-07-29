@@ -7,7 +7,7 @@ const backToTopBtn = document.getElementById('backToTop');
 // Countdown Timer
 function updateCountdown() {
     const currentYear = new Date().getFullYear();
-    let eventDate = new Date(`November 4, ${currentYear} 18:00:00`).getTime();
+    let eventDate = new Date(`November 4, ${currentYear} 17:00:00`).getTime();
     const now = new Date().getTime();
     
     // If this year's date has passed, use next year's date
