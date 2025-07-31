@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
+
 /* CSS Reset and Base Styles */
 * {
     margin: 0;
@@ -26,7 +29,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Faculty Glyphic", sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
@@ -250,7 +253,7 @@ nav {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -334,7 +337,7 @@ nav {
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(-45deg, #2c5aa0, #4a90e2, #2c5aa0, #4a90e2);
+  background: linear-gradient(-45deg, #192433, #061a30, #12243f, #032144);
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
 }
@@ -361,7 +364,7 @@ nav {
     position: absolute;
     border-radius: 50%;
     opacity: 0.25;
-    filter: blur(80px);
+    filter: blur(50px);
     animation: floatBlob 10s ease-in-out infinite;
     mix-blend-mode: screen;
 }
@@ -369,7 +372,7 @@ nav {
 .blob1 {
     width: 300px;
     height: 300px;
-    background: #d4af37;
+    background: #2afd00;
     top: 20%;
     left: 10%;
     animation-delay: 0s;
@@ -378,10 +381,10 @@ nav {
 .blob2 {
     width: 400px;
     height: 400px;
-    background: #ffffff;
+    background: #86e915;
     bottom: 10%;
     right: 10%;
-    animation-delay: 5s;
+    animation-delay: 2s;
 }
 
 @keyframes floatBlob {
@@ -389,7 +392,7 @@ nav {
         transform: translateY(0px) scale(1);
     }
     50% {
-        transform: translateY(-20px) scale(1.05);
+        transform: translateY(-20px) scale(10);
     }
 }
 
@@ -402,7 +405,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(44, 90, 160, 0.8) 0%, rgba(74, 144, 226, 0.6) 100%);
+    background: linear-gradient(45deg, rgba(0, 25, 63, 0.8) 0%, rgba(0, 119, 255, 0.6) 100%);
 }
 
 .hero-content {
@@ -410,12 +413,12 @@ nav {
     z-index: 2;
     text-align: center;
     color: var(--white);
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+    font-family: "Sigmar", sans-serif;
+    font-size: 6rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -458,12 +461,30 @@ nav {
 }
 
 .countdown-item {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 251, 12, 0.1);
     backdrop-filter: blur(10px);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    min-width: 80px;
+    border: 1px solid rgba(0, 253, 84, 0.808);
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    min-width: 100px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(43, 238, 4, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.countdown-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    animation: glowShadow 1.5s infinite alternate;
+}
+
+@keyframes glowShadow {
+    from {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+    to {
+        box-shadow: 0 20px 50px rgba(0, 253, 84, 0.4);
+    }
 }
 
 .countdown-number {
@@ -542,7 +563,7 @@ nav {
 }
 
 .welcome-text h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
@@ -666,7 +687,7 @@ nav {
 }
 
 .day-header h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -779,7 +800,7 @@ nav {
 }
 
 .speaker-info h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
@@ -888,7 +909,7 @@ nav {
 }
 
 .venue-info h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
@@ -947,7 +968,7 @@ nav {
 }
 
 .contact-info h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 2rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
@@ -1062,7 +1083,7 @@ nav {
 }
 
 .cta-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -1104,7 +1125,7 @@ footer {
 }
 
 .footer-section h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     color: var(--accent-color);
 }
 
@@ -1420,7 +1441,7 @@ footer {
     top: -20px;
     right: 20px;
     font-size: 120px;
-    font-family: 'Playfair Display', serif;
+    font-family: "Faculty Glyphic", sans-serif;
     color: var(--primary-color);
     opacity: 0.1;
     line-height: 1;
