@@ -64,14 +64,22 @@ const heroContent = document.querySelector('.hero-content');
 const parallaxBg = document.querySelector('.hero-background');
 
 window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    
+    // Header scroll effect
+    if (scrolled > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    // Parallax effects
     if (parallaxBg) {
-        const scrolled = window.pageYOffset;
         parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
     if (heroContent) {
-        const scrolled = window.pageYOffset;
         heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-        heroContent.style.opacity = 1 - (scrolled * 0.003);
+        heroContent.style.opacity = 1 - (scrolled * 0.001); // Changed from 0.003 to 0.001
     }
 });
 
