@@ -74,7 +74,7 @@ window.addEventListener('scroll', () => {
     }
     
     // Parallax effects
-    if (parallaxBg) {
+    if (parallaxBg) { 
         parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
     if (heroContent) {
