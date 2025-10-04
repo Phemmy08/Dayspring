@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Merienda:wght@300..900&family=Playwrite+DE+Grund:wght@100..400&family=Uncial+Antiqua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Playwrite+DE+Grund:wght@100..400&family=Uncial+Antiqua&display=swap');
 
 * {
     margin: 0;
@@ -10,7 +11,7 @@
 }
 
   body {
-            font-family: 'Arial', sans-serif;
+            font-family: "Playwrite DE Grund", cursive;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

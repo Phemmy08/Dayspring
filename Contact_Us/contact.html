@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header>
+  <header>
+        
+        
+           
+             <nav class="navbar">
+            <div class="logo">DAYSPRING SERAPHIC CHURCH</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About_Us/aboutus.html">About Us</a></li>
+                <li><a href="../Camp-Nehemiah25/index.html">Camp Nehemiah</a></li>
+                <li><a href="../Announcements/announcement.html">Announcements</a></li>
+                 <li><a href="../gallery/index.html">Gallery</a></li>
+                <li><a href="../Contact_Us/contact.html">Contact Us</a></li>
+               
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+
+
+           <!--    <header>
         <h1>Contact Us</h1>
         <p>Get in touch! We would love to hear from you.</p>
         <div class="cta-buttons">
@@ -16,7 +40,20 @@
             <a href="../About_Us/aboutus.html">About Us</a>
             <a href="../Announcements/announcement.html">Announcements</a>
         </div>
-    </header>
+    </header> -->
+          
+          </header>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+
+        // Optional: Animate the hamburger icon
+        hamburger.classList.toggle('active');
+    });
+          </script>
 
     <section class="contact" id="contact">
         <h2>Reach Out to us</h2>
@@ -51,8 +88,8 @@
                                 "Accept": "application/json"
                             }
                         }).then(response => response.json()).then(data => {
-                            alert("Message sent successfully!"); // Show success alert
-                            form.reset(); // Reset form fields
+                            alert("Message sent successfully!"); 
+                            form.reset();
                         }).catch(error => {
                             alert("Oops! Something went wrong.");
                         });

@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fugaz+One&family=Gugi&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Merienda:wght@300..900&family=Playwrite+DE+Grund:wght@100..400&family=Uncial+Antiqua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gabriela&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: "Gabriela", serif;
+    font-family: "Playwrite DE Grund", cursive  ;
 }
 
 .head {
@@ -186,11 +189,15 @@ header {
   }
 }
 
+.about-content {
+    font-family: "Lilita One", sans-serif;
+}
+
 .about-content h2 {
-  font-size: 48px;
+  font-size: 5rem;
   font-weight: 900;
   margin-bottom: 10px;
-  color: #FFD700; /* Gold or bright highlight */
+  color: wheat; /* Gold or bright highlight */
   text-transform: uppercase;
   letter-spacing: 2px;
 }
