@@ -758,10 +758,30 @@ nav {
     background: var(--white);
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .speakers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .speaker-card {
@@ -779,22 +799,46 @@ nav {
 }
 
 .speaker-image {
-    height: 200px;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    background: var(--secondary-color);
+    position: relative;
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.speaker-card:hover .speaker-image img {
+    transform: scale(1.05);
+}
+
+/* Fallback for missing images */
+.speaker-image img[src=""],
+.speaker-image img:not([src]),
+.speaker-image img[src*="path-to-your-image"] {
+    display: none;
+}
+
+.speaker-image:has(img[src=""]),
+.speaker-image:has(img:not([src])),
+.speaker-image:has(img[src*="path-to-your-image"]) {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--secondary-color);
 }
 
-.speaker-image .image-placeholder {
-    background: none;
-    padding: 2rem;
-    min-height: auto;
-}
-
-.speaker-image i {
+.speaker-image:has(img[src*="path-to-your-image"])::before {
+    content: "\f007"; /* Font Awesome user icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 4rem;
     color: var(--primary-color);
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 .speaker-info {
@@ -820,6 +864,56 @@ nav {
     line-height: 1.6;
     font-size: 0.95rem;
     margin: 0;
+}
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speakers {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .speakers-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .speaker-image {
+        height: 500px;
+    }
+    
+    .speaker-info {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .speaker-image {
+        height: 500px;
+    }
 }
 
 /* Testimonials Section */

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+      <header>
+        
+        
+           
+             <nav class="navbar">
+            <div class="logo">DAYSPRING SERAPHIC CHURCH</div>
+            <ul class="nav-links">
+                <li><a href="../../">Home</a></li>
+                <li><a href="../About_Us/aboutus.html">About Us</a></li>
+                <li><a href="../Camp-Nehemiah25/index.html">Camp Nehemiah</a></li>
+                <li><a href="../Announcements/announcement.html">Announcements</a></li>
+                 <li><a href="../gallery/index.html">Gallery</a></li>
+                <li><a href="../Contact_Us/contact.html">Contact Us</a></li>
+               
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+
+
+          
+          </header>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+
+        // Optional: Animate the hamburger icon
+        hamburger.classList.toggle('active');
+    });
+          </script>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Account Details</h1>
+    </section>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Local Nigeria Section -->
+        <section class="section">
+            <div class="section-title">
+                <h2>Local (Nigeria)</h2>
+                <h3>Bank Transfers</h3>
+            </div>
+
+            <div class="accounts-container">
+                <!-- Account 1 - Access Bank -->
+                <div class="account-card">
+                    <div class="bank-logo">
+                        <img src="unity.jpeg" alt="Unity Bank Logo">
+                    </div>
+                    <div class="account-info">
+                        <p><strong>Bank:</strong> <span class="value">UNITY BANK</span></p>
+                        <p><strong>Account Name:</strong> <span class="value">Holy Order Dayspring Seraphic Church</span></p>
+                        <p><strong>Account Number:</strong> <span class="value">0055300245</span></p>
+                    </div>
+                </div>
+
+                <!-- Account 2 - First Bank -->
+                <div class="account-card">
+                    <div class="bank-logo">
+                        <img src="providus.png" alt="Providus Bank Logo">
+                    </div>
+                    <div class="account-info">
+                        <p><strong>Bank:</strong> <span class="value">PROVIDUS BANK</span></p>
+                        <p><strong>Account Name:</strong> <span class="value">DAYSPRING SERAPHIC CHURCH WORLD</span></p>
+                        <p><strong>Account Number:</strong> <span class="value">1307917459</span></p>
+                    </div>
+                </div>
+
+                <!-- HIDDEN THIRD ACCOUNT - Remove the 'hidden' class to display -->
+                <div class="account-card hidden">
+                    <div class="bank-logo">
+                        <img src="bank-logo.png" alt="Bank Logo">
+                    </div>
+                    <div class="account-info">
+                        <p><strong>Bank:</strong> <span class="value">BANK NAME HERE</span></p>
+                        <p><strong>Account Name:</strong> <span class="value">ACCOUNT NAME HERE</span></p>
+                        <p><strong>Account Number:</strong> <span class="value">0000000000</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- International Section -->
+        <section class="section">
+            <div class="section-title">
+                <h2>International</h2>
+                <h3>Bank Transfers</h3>
+            </div>
+
+            <div class="accounts-container">
+                <!-- International Account - Access Bank -->
+                <div class="account-card">
+                    <div class="bank-logo">
+                        <img src="unity.jpeg" alt="Unity Bank Logo">
+                    </div>
+                    <div class="account-info">
+                        <p><strong>Bank:</strong> <span class="value">UNITY BANK</span></p>
+                        <p><strong>Account Name:</strong> <span class="value">Holy Order Dayspring Seraphic Church</span></p>
+                        <p><strong>Account Number:</strong> <span class="value">0055300245</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+    
+     <footer class="scroll-reveal">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../" >Home</a></li>
+                    <li><a href="../../About_Us/aboutus.html">About Us</a></li>
+                    <li><a href="../../Announcements/announcement.html">Announcements</a></li>
+                    <li><a href="../../Contact_Us/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Laibuga House, Ilesha Garage, Akure South, Ondo State.</p>
+                <p>Phone: +2347059176093</p>
+                <p>Email: dayspringingseraphs@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/DayspringSC/" aria-label="Facebook">Facebook</a>
+                    <a href="https://youtube.com/@DayspringSeraphicChurch" aria-label="Youtube">Youtube</a>
+                    <a href="https://instagram.com/dayspringseraphicchurch/?fbclid=IwY2xjawG3FYtleHRuA2FlbQIxMAABHQvMNfxZ8Z7CuxlNNqCTJTaMxihaCCu_Qbh8CjGup0Emvyjs0K0_vdVfnA_aem_msWL-ry2eQOmbyGLmFvkKw" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dayspring Seraphic Church. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

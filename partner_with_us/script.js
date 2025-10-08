@@ -117,47 +117,47 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Local Card Payment
-localCardBtn.addEventListener('click', function(e) {
+/* localCardBtn.addEventListener('click', function(e) {
     createRipple(e);
     setTimeout(() => {
         alert('Redirecting to Local Card Payment Gateway...\n\nPlease update this with your payment URL.');
         // window.location.href = 'your-local-card-payment-url';
     }, 300);
-});
+}); */
 
 // Local Transfer Details
-localTransferBtn.addEventListener('click', function(e) {
+/* localTransferBtn.addEventListener('click', function(e) {
     createRipple(e);
     setTimeout(() => {
         showTransferModal('local');
     }, 300);
-});
+}); */
 
 // International Card Payment
-intlCardBtn.addEventListener('click', function(e) {
+/* intlCardBtn.addEventListener('click', function(e) {
     createRipple(e);
     setTimeout(() => {
         alert('Redirecting to International Card Payment Gateway...\n\nPlease update this with your payment URL.');
         // window.location.href = 'your-international-card-payment-url';
     }, 300);
-});
+}); */
 
 // International Transfer Details
-intlTransferBtn.addEventListener('click', function(e) {
+/* intlTransferBtn.addEventListener('click', function(e) {
     createRipple(e);
     setTimeout(() => {
         showTransferModal('international');
     }, 300);
-});
+}); */
 
 // Transfer Details Modal Function
-function showTransferModal(type) {
+/* function showTransferModal(type) {
     const modalContent = type === 'local' 
         ? `
             <h3>Local Bank Transfer Details</h3>
-            <p><strong>Bank Name:</strong> [Your Bank Name]</p>
-            <p><strong>Account Name:</strong> [Church Account Name]</p>
-            <p><strong>Account Number:</strong> [Account Number]</p>
+            <p><strong>Bank Name:</strong> UBA</p>
+            <p><strong>Account Name:</strong> Dayspring Seraphic Church</p>
+            <p><strong>Account Number:</strong> 1122334455667</p>
             <p><strong>Reference:</strong> Partnership/Tithe/Offering</p>
         `
         : `
@@ -169,11 +169,11 @@ function showTransferModal(type) {
             <p><strong>Reference:</strong> Partnership/Tithe/Offering</p>
         `;
     
-    alert(`${type.toUpperCase()} TRANSFER DETAILS\n\nPlease update the JavaScript file with your actual bank details.\n\nYou can also create a modal popup for a better user experience.`);
+    alert(`${type.toUpperCase()} TRANSFER DETAILS\n\nPlease update the JavaScript file with your actual bank details.\n\nYou can also create a modal popup for a better user experience.`); */
     
     // You can create a beautiful modal instead of alert
     // Example: showModal(modalContent);
-}
+/* } */
 
 // Parallax Effect on Scroll
 window.addEventListener('scroll', function() {
