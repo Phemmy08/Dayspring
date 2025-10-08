@@ -202,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
             top: 100%;
             left: 0;
             right: 0;
-            background: var(--background-light);
             padding: 1rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
