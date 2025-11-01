@@ -106,6 +106,44 @@ setInterval(updateSlide, 5000); // Rotate every 5 seconds
 
             
 
+
+
+<div id="player"></div>
+<div id="message" style="font-size:18px;text-align:center;margin-top:20px;"></div>
+
+<script>
+const channelId = "UCy9-3ajCGzP9bekDEJA5HeA"; 
+const apiKey = "AIzaSyBBa-uG-xIGDKFyqTAuh-3f7AtnS0MLoF0";
+
+async function getLatestVideo() {
+  let apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=1&key=${apiKey}`;
+  let response = await fetch(apiUrl);
+  let data = await response.json();
+  return data.items[0].id.videoId;
+}
+
+async function checkLive() {
+  let apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&key=${apiKey}`;
+
+  let response = await fetch(apiUrl);
+  let data = await response.json();
+
+  if (data.items.length > 0) {
+    const liveId = data.items[0].id.videoId;
+    document.getElementById("player").innerHTML =
+      `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${liveId}" frameborder="0" allowfullscreen></iframe>`;
+  } else {
+    const latestVideoId = await getLatestVideo();
+    document.getElementById("player").innerHTML =
+      `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${latestVideoId}" frameborder="0" allowfullscreen></iframe>`;
+    document.getElementById("message").innerHTML =
+      "⛪ We are not live now — Showing last sermon";
+  }
+}
+
+checkLive();
+</script>
+
             
 
 
